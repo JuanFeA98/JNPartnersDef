@@ -1,0 +1,27 @@
+.Hero{
+    background: #e4dcdc;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hero img{
+    width: 85%;
+    border-radius: 10px;
+}
+
+.Hero h2{
+    width: 80%;
+    text-align: center;
+    margin-top: 15px;
+    color: #0f0f0f;
+}
+
+.Hero p{
+    width: 90%;
+    text-align: center;
+    margin: 15px;
+    line-height: 20px;
+}
