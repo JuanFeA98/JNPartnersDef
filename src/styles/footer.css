@@ -1,12 +1,11 @@
 footer{
     background: #161616;
-    height: 300px;
     padding: 40px 0;
 }
 
 footer h5{
   color: #e4dcdc;
-
+    margin-bottom: 15px;
 }
 
 .Footer__social{
@@ -33,14 +32,46 @@ footer h5{
     font-weight: 500;
     color: #e4dcdc;
     margin: 5px;
-    padding: 5px 18px;
-
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 .Footer__options a:hover{
     background: #e4dcdc;
     color: #161616;
     padding: 5px 15px;
-    border-radius: 10px;
 }
 
+@media screen and (min-width:768px) {
+    .Footer{
+        height: auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0 ;
+    }
+    
+    footer h5{
+        margin-left: 20px;
+    }
+
+    .Footer__options{
+        width: 800px;
+        margin: 0;
+        flex-direction: row;
+    }
+    
+    .Footer__social{
+        width: 250px;
+        margin: 0;
+    }
+
+    .Footer__Left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+}

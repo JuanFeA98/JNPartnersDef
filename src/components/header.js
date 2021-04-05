@@ -2,7 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import MenuIcon from "../images/menu.png"
+import "../styles/header.css"
+import toggle__menu from '../utils/toggle_menu'
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -11,13 +12,20 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <img className="header__image" src={MenuIcon} alt="Menu"></img>
+      <div id="toggle__menu" onClick={ toggle__menu }>
+      </div>      
+      <div id="options__menu">
+        <Link to="/">Opción 1</Link>
+        <Link to="/">Opción 2</Link>
+        <Link to="/">Opción 3</Link>
+      </div>
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
+
 
 Header.defaultProps = {
   siteTitle: ``,
