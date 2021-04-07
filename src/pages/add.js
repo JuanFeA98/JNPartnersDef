@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -16,25 +16,25 @@ function SecondPage() {
   }
 
   const [values, setValues] = useState(initialValues);
-  const [links, setlinks] = useState([]);
+  // const [links, setlinks] = useState([]);
 
   const add = async(linkObject)=>{
     await db.collection('prueba').doc().set(linkObject);
   }
 
-  const call = async(e)=>{
-    db.collection('prueba').onSnapshot((querySnapshot)=>{
-      const docs = []
-      querySnapshot.forEach((doc)=>{
-        docs.push({...doc.data(), id:doc.id})
-      });
-      setlinks(docs)
-    })
-  }
+  // const call = async(e)=>{
+  //   db.collection('prueba').onSnapshot((querySnapshot)=>{
+  //     const docs = []
+  //     querySnapshot.forEach((doc)=>{
+  //       docs.push({...doc.data(), id:doc.id})
+  //     });
+  //     setlinks(docs)
+  //   })
+  // }
 
-  useEffect(()=>{
-    call();
-  }, [])  
+  // useEffect(()=>{
+  //   call();
+  // }, [])  
 
   const handleInputChange = (e)=>{
     const { name, value } = e.target;
@@ -50,7 +50,7 @@ function SecondPage() {
     <Layout>
         <div className="Add">
           <SEO title="Page two" />
-          <h1>Hi from the second page</h1>
+          <h2>Hi from the second page</h2>
           <p>Welcome to page 2</p>
           <Link to="/">Go back to the homepage</Link>
 
@@ -60,13 +60,13 @@ function SecondPage() {
             <button onClick={handleSubmit}>Hello</button>
           </form>
 
-          <div className="test">
+          {/* <div className="test">
             {links.map((link)=>(
               <div key={link.id}>
                 <p>{link.Titulo}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
     </Layout>
   )

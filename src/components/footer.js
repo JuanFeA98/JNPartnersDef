@@ -12,8 +12,8 @@ const Footer = () => (
         <div className="Footer__Left">
             <h5>JNPartners & Co</h5>
             <div className="Footer__options">
-                <Link to="/page-2">Option random</Link>
-                <Link to="/">Option random</Link>
+                <Link to="/add">Option random</Link>
+                <Link to="/blog">Option random</Link>
                 <Link to="/">Option random</Link>
                 <Link to="/">Option random</Link>
             </div>
